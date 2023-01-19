@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>you have succesfully logged in </h1>
+    <ul>
+      <h3>your name:</h3>   <%= name %>
+    </ul>
+    <form action="upload" method="POST" enctype="multipart/form-data">
+        <h4>slet your file to upload on drive</h4>
+        <input type="file" name="files" multiple required /> <br><br>
+        <input type="submit" value="Upload File" />
+    </form>
+    <br><br><br><br>
+    <h3>get list of files</h3>
+    <form action="list" method="GET">
+        <input type="submit" value="get list of files">
+    </form><br><br>
+
+    <h2>insert file id which you want to delete</h2>
+    <form action="delete" method="POST" enctype="application/x-www-form-urlencoded">
+        <input type="text" name="id" id="id">
+        <input type="submit" value="delete file">
+    </form>
+</body>
+
+</html>
